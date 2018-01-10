@@ -2,17 +2,18 @@ package ds.stack;
 
 public class Stack {
 	private int maxSize;// max size of the array
-	private long[] stackArray;// container array
+	private char[] stackArray;// container array
 	private int top;// very important for indexing
 
 	public Stack(int size) {
 		this.maxSize = size;// max size will be equal to the size entered by the user
-		this.stackArray = new long[maxSize];
+		this.stackArray = new char[maxSize];
 		this.top = -1; // as the array is empty right now
 
 	}
 
-	public void push(long j)// add new element
+	public void push(char j)// add new element
+	{	if(isFull()) //to check if the the stack is full
 	{
 		System.out.println("The stack is already full");
 	}
@@ -23,11 +24,11 @@ public class Stack {
 		
 	}
 
-	public long pop() // take out the topmost element
+	public char pop() // take out the topmost element
 	{	if(isEmpty()) // to check if the stack is empty
 	{
 		System.out.println("The stack is already empty");
-		return -1;
+		return 0;
 	}else {
 		int oldTop = top;// storing the value of top before changing so that it can be returned
 		top--;
@@ -36,7 +37,7 @@ public class Stack {
 		
 	}
 
-	public long peak()// let the user take sneak peak of the topmost element
+	public char peak()// let the user take sneak peak of the topmost element
 	{
 		return stackArray[top];
 	}

@@ -24,11 +24,22 @@ public class App {
 		
 
 	}
-	public String str="hello";
+	
 	public static String reverseString(String str) {
+		int x=str.length(); //get the max size size
 		
-		str.split("");
-		return str;
+		Stack stringStack=new Stack(x);
+		for(int i=0;i<x;i++)
+		{
+			stringStack.push(str.charAt(x));
+		}
+		char
+		while(!stringStack.isEmpty())
+		{
+			
+		}
+		
+		
 	}
 	
 
